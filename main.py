@@ -3,8 +3,9 @@ import logging
 import sys
 from os import getenv
 from dotenv import load_dotenv
+
 load_dotenv()
-#hello world
+# hello world
 
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
@@ -14,19 +15,16 @@ from aiogram.types import Message
 
 TOKEN = getenv("BOT_TOKEN")
 
-
 dp = Dispatcher()
 
 
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
-
     await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!")
 
 
 @dp.message()
 async def echo_handler(message: Message) -> None:
-
     try:
         await message.send_copy(chat_id=message.chat.id)
     except TypeError:
