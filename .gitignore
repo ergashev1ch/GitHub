@@ -126,4 +126,4 @@ dmypy.json
 cython_debug/
 .venv/
 .env/
-.idea
+.idea/

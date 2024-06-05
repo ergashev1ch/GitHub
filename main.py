@@ -4,6 +4,7 @@ import sys
 from os import getenv
 from dotenv import load_dotenv
 load_dotenv()
+#hello world
 
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
